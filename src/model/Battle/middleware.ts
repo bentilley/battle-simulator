@@ -53,5 +53,5 @@ const stopDiceRolling = async (dispatch: Dispatch<Action>): Promise<void> => {
     dispatch({ type: "SET_BATTLE_STATE", payload: "WAITING" });
     dispatch({ type: "SET_PLAYER_LAST_DAMAGE", payload: 0 });
     dispatch({ type: "SET_MONSTER_LAST_DAMAGE", payload: 0 });
-  }, 2000);
+  }, 1500);
 };

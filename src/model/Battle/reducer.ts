@@ -25,15 +25,15 @@ export const initialState: State = {
   battle: { state: "WAITING", lastAttackDamage: 0 },
   player: {
     name: "Ben",
-    health: 10,
-    maxHealth: 10,
+    health: 100,
+    maxHealth: 100,
     lastDamage: 0,
     img: "ninja.svg",
   },
   monster: {
     name: "Monster",
-    health: 10,
-    maxHealth: 10,
+    health: 100,
+    maxHealth: 100,
     lastDamage: 0,
     img: "monster.svg",
   },
@@ -107,7 +107,7 @@ const monsterReducer = (monsterState: Combatant, action: Action): Combatant => {
     case "DECR_MONSTER_HEALTH":
       return {
         ...monsterState,
-        health: Math.max(monsterState.health - action.payload),
+        health: Math.max(monsterState.health - action.payload, 0),
         lastDamage:
           action.payload <= monsterState.health
             ? action.payload
