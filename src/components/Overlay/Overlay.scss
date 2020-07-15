@@ -1,0 +1,24 @@
+@use "../../style/_variables" as v;
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: v.$title;
+  font-weight: v.$fw-bold;
+
+  &--win {
+    color:v.$green;
+    background-color: rgba(v.$green, 0.3);
+  }
+
+  &--loss {
+    color:v.$red;
+    background-color: rgba(v.$red, 0.3);
+  }
+}

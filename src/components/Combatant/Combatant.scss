@@ -1,0 +1,150 @@
+@use "../../style/variables" as v;
+
+.combatant {
+  $self: &;
+  width: v.$combatant-width;
+  display: flex;
+  flex-direction: column;
+  padding: 0 v.$space-4;
+
+  &__action_panel {
+    display: flex;
+    flex-basis: auto;
+    flex-grow: 1;
+  }
+
+  &__title {
+    h1 {
+      font-size: v.$header-2;
+      font-weight: v.$fw-fine;
+    }
+  }
+
+  &__avatar {
+    margin-top: v.$space-5;
+  }
+
+  &__avatar_img_container {
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: 190px;
+      position: relative;
+      top: 18px;
+    }
+  }
+
+  &__avatar_base {
+    height: 4rem;
+    background-color: #ddd;
+    border-radius: 50%;
+    box-shadow: #777 -3px 5px;
+  }
+
+  &__health {
+    margin-top: v.$space-7;
+    font-size: v.$text;
+  }
+
+  &__health_bar {
+    display: flex;
+    align-items: center;
+
+    p {
+      margin-right: v.$space-3;
+    }
+  }
+
+  &__health_bar_bg {
+    flex-basis: auto;
+    flex-grow: 1;
+    position: relative;
+    height: v.$space-5;
+    border-radius: 3px;
+    background-color: v.$light-grey;
+  }
+
+  &__health_bar_fg {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 3px;
+    background-color: v.$blue;
+  }
+
+  &__health_bar_damage {
+    height: 100%;
+    // TODO update width from component
+    width: 12%;
+    border-radius: 3px;
+    background-color: v.$red;
+  }
+
+  &__health_bar_damage_number {
+    position: relative;
+    top: - v.$space-7;
+    margin: 0;
+    line-height: 1;
+    text-align: center;
+  }
+
+  &__health_fraction {
+    margin-left: v.$space-8
+  }
+
+  &__messages {
+    width: 90%;
+    font-size: v.$text;
+    border: v.$line-normal solid v.$dark-grey;
+    border-radius: 15px;
+    padding: v.$space-4;
+  }
+
+  &__messages_action {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+  }
+
+  &__messages_selector {
+    width: 0;
+    height: 0;
+    border-left: v.$space-4 solid v.$grey;
+    border-top: v.$space-4 solid transparent;
+    border-bottom: v.$space-4 solid transparent;
+    margin-right: v.$space-3;
+  }
+
+  &__dice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 v.$space-2;
+    font-size: v.$title;
+    line-height: 1;
+  }
+
+  &__die {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: v.$space-2 0;
+  }
+
+  &--left {
+    #{$self}__title {
+      text-align: left;
+    }
+  }
+
+  &--right {
+    #{$self}__title {
+      text-align: right;
+    }
+
+    #{$self}__action_panel {
+      flex-direction: row-reverse;
+    }
+  }
+}

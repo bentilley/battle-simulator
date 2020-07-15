@@ -22,16 +22,15 @@ module.exports = {
         ],
       },
       {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
-      },
-      {
         test: /\.s[ac]ss$/i,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
   },
-  resolve: { extensions: ["*", ".ts", ".tsx", ".js", ".jsx"] },
+  resolve: {
+    extensions: ["*", ".wasm", ".mjs", ".json", ".ts", ".tsx", ".js", ".jsx"],
+    modules: ["node_modules", path.resolve(__dirname, "src")],
+  },
   output: {
     path: path.resolve(__dirname, "dist/"),
     publicPath: "/dist/",

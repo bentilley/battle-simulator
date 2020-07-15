@@ -1,0 +1,39 @@
+@use "../../style/_variables" as v;
+
+.bs-container {
+  height: 100%;
+  padding: v.$space-5;
+  padding-top: v.$space-8;
+
+  .title {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: - v.$title / 2;
+
+    h1 {
+      font-size: v.$title;
+      font-weight: v.$fw-normal;
+      line-height: 1;
+      display: inline;
+      background-color: v.$white;
+      padding: 0 12px;
+    }
+  }
+
+  .border {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: v.$line-thick solid v.$black;
+    border-radius: 30px;
+    padding-bottom: v.$space-4;
+  }
+
+  .contents {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: auto;
+    flex-grow: 1;
+  }
+}

@@ -1,0 +1,18 @@
+/* Simple CSs Reset */
+@use "./style/reset.css";
+
+/* Simple Dice CSS Library */
+@use "./style/_dice.scss";
+/* see https://diafygi.github.io/dice-css/ */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600;700&display=swap');
+
+html {
+  font-size: 62.5%;
+}
+
+.App {
+  height: 100vh;
+  font-family: 'Dosis', sans-serif;
+}

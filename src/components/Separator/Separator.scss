@@ -1,0 +1,21 @@
+@use "../../style/variables" as v;
+
+.separator {
+  display: flex;
+  flex-direction: column;
+  width: 100% - (2 * v.$combatant-width);
+
+  &__spacer {
+    height: 400px;
+  }
+
+  &__message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: v.$text;
+    text-align: center;
+    flex-basis: auto;
+    flex-grow: 1;
+  }
+}
