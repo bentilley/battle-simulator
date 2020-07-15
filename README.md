@@ -32,3 +32,9 @@ A Redux style flow of actions, middleware, and a reducer are built up in the
 components, which can then access state and actions through the two custom
 hooks `useBattle` and `useBattleActions` provided (see
 [context.tsx](src/model/Battle/context.tsx)).
+
+## TODO
+
+- Tests
+- Animation for damage
+- Tidy components folder
